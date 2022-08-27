@@ -1,0 +1,35 @@
+<div class="container">
+<div class="title-container">
+        <h1>{{translation['title'][language]}}</h1>
+    </div>
+<div id="faq">
+  <ul class="drop-ul">
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>{{translation['title-educations'][language]}}</h2>
+      <div class="li-content">
+        <span *ngFor="let education of translation['educations']">
+          <h3>{{education["title"][language]}}</h3>
+          <h4>{{education["second-title"][language]}}</h4>
+          <p [innerHTML]="education['paragraph'][language]"></p>
+          <br>
+        </span>
+      </div>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>{{translation['title-experience'][language]}}</h2>
+      <div class="li-content">
+        <span *ngFor="let experience of translation['work-experience']">
+          <h3>{{experience["title"][language]}}</h3>
+          <h4>{{experience["second-title"][language]}}</h4>
+          <p [innerHTML]="experience['paragraph'][language]"></p>
+          <br>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
